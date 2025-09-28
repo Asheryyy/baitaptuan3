@@ -1,12 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace baitap001
 {
@@ -26,6 +28,11 @@ namespace baitap001
         {
 
         }
+        private bool IsValidEmail(string email)
+        {
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, emailPattern);
+        }
 
         private void btnĐK_Click(object sender, EventArgs e)
         {
@@ -33,6 +40,14 @@ namespace baitap001
             if (txtDKTK.Text == "")
             {
                 errorProvider1.SetError(txtDKTK, "Vui lòng nhập tài khoản");
+            }
+            if(txtEmail.Text == "")
+            {
+                errorProvider1.SetError(txtEmail, "Vui lòng nhập email");
+            }
+            if (!IsValidEmail(txtEmail.Text))
+            {
+                errorProvider1.SetError(txtEmail, "Email không hợp lệ");
             }
             if (txtMK.Text == "")
             {
@@ -54,7 +69,7 @@ namespace baitap001
             {
                 errorProvider1.SetError(txtMK, "Mật khẩu phải lớn hơn 8 ký tự");
             }
-            if (txtDKTK.Text != "" && txtMK.Text != "" && txtNLMK.Text != "" && txtMK.Text == txtNLMK.Text && txtMK.Text.Length >= 8)
+            if (txtDKTK.Text != "" && txtMK.Text != "" && txtNLMK.Text != "" && txtMK.Text == txtNLMK.Text && txtMK.Text.Length >= 8 && txtEmail.Text != "" && IsValidEmail(txtEmail.Text))
             {
                 MessageBox.Show("Đăng kí thành công");
                 this.Hide();

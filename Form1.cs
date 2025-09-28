@@ -23,7 +23,7 @@ namespace baitap001
             {
                 MessageBox.Show("Đăng nhập thành công !");
                 this.Hide();
-                frmHien f = new frmHien();
+                hienthi f = new hienthi();
                 f.ShowDialog();
             }
             else
@@ -34,7 +34,7 @@ namespace baitap001
 
         private void btnĐK_Click(object sender, EventArgs e)
         {
-            frmĐK f = new frmĐK();
+            dki f = new dki();
             this.Hide();
             f.ShowDialog();
             this.Show();

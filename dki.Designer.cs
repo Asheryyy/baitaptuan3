@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dki));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTK = new System.Windows.Forms.Label();
             this.lblMK = new System.Windows.Forms.Label();
             this.lblNLMK = new System.Windows.Forms.Label();
             this.btnĐK = new System.Windows.Forms.Button();
@@ -44,6 +44,8 @@
             this.picHide1 = new System.Windows.Forms.PictureBox();
             this.picShow1 = new System.Windows.Forms.PictureBox();
             this.picShow2 = new System.Windows.Forms.PictureBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHide2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHide1)).BeginInit();
@@ -51,20 +53,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.picShow2)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTK
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tài Khoản hoặc email";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTK.Location = new System.Drawing.Point(61, 201);
+            this.lblTK.Name = "lblTK";
+            this.lblTK.Size = new System.Drawing.Size(207, 23);
+            this.lblTK.TabIndex = 0;
+            this.lblTK.Text = "Tài Khoản";
+            this.lblTK.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblMK
             // 
             this.lblMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMK.Location = new System.Drawing.Point(57, 166);
+            this.lblMK.Location = new System.Drawing.Point(61, 283);
             this.lblMK.Name = "lblMK";
             this.lblMK.Size = new System.Drawing.Size(207, 23);
             this.lblMK.TabIndex = 1;
@@ -73,7 +75,7 @@
             // lblNLMK
             // 
             this.lblNLMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNLMK.Location = new System.Drawing.Point(57, 239);
+            this.lblNLMK.Location = new System.Drawing.Point(61, 370);
             this.lblNLMK.Name = "lblNLMK";
             this.lblNLMK.Size = new System.Drawing.Size(207, 23);
             this.lblNLMK.TabIndex = 2;
@@ -83,7 +85,7 @@
             // btnĐK
             // 
             this.btnĐK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnĐK.Location = new System.Drawing.Point(302, 319);
+            this.btnĐK.Location = new System.Drawing.Point(317, 462);
             this.btnĐK.Name = "btnĐK";
             this.btnĐK.Size = new System.Drawing.Size(132, 47);
             this.btnĐK.TabIndex = 3;
@@ -94,7 +96,7 @@
             // txtDKTK
             // 
             this.txtDKTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDKTK.Location = new System.Drawing.Point(302, 96);
+            this.txtDKTK.Location = new System.Drawing.Point(302, 197);
             this.txtDKTK.Name = "txtDKTK";
             this.txtDKTK.Size = new System.Drawing.Size(269, 27);
             this.txtDKTK.TabIndex = 4;
@@ -102,7 +104,7 @@
             // txtMK
             // 
             this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.Location = new System.Drawing.Point(302, 163);
+            this.txtMK.Location = new System.Drawing.Point(302, 280);
             this.txtMK.Name = "txtMK";
             this.txtMK.Size = new System.Drawing.Size(269, 27);
             this.txtMK.TabIndex = 5;
@@ -111,7 +113,7 @@
             // txtNLMK
             // 
             this.txtNLMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNLMK.Location = new System.Drawing.Point(302, 239);
+            this.txtNLMK.Location = new System.Drawing.Point(302, 366);
             this.txtNLMK.Name = "txtNLMK";
             this.txtNLMK.Size = new System.Drawing.Size(269, 27);
             this.txtNLMK.TabIndex = 6;
@@ -124,7 +126,7 @@
             // chkMK
             // 
             this.chkMK.AutoSize = true;
-            this.chkMK.Location = new System.Drawing.Point(593, 172);
+            this.chkMK.Location = new System.Drawing.Point(593, 290);
             this.chkMK.Name = "chkMK";
             this.chkMK.Size = new System.Drawing.Size(18, 17);
             this.chkMK.TabIndex = 7;
@@ -134,7 +136,7 @@
             // chkNLMK
             // 
             this.chkNLMK.AutoSize = true;
-            this.chkNLMK.Location = new System.Drawing.Point(593, 249);
+            this.chkNLMK.Location = new System.Drawing.Point(593, 373);
             this.chkNLMK.Name = "chkNLMK";
             this.chkNLMK.Size = new System.Drawing.Size(18, 17);
             this.chkNLMK.TabIndex = 8;
@@ -144,7 +146,7 @@
             // picHide2
             // 
             this.picHide2.Image = ((System.Drawing.Image)(resources.GetObject("picHide2.Image")));
-            this.picHide2.Location = new System.Drawing.Point(617, 160);
+            this.picHide2.Location = new System.Drawing.Point(617, 276);
             this.picHide2.Name = "picHide2";
             this.picHide2.Size = new System.Drawing.Size(50, 30);
             this.picHide2.TabIndex = 9;
@@ -153,7 +155,7 @@
             // picHide1
             // 
             this.picHide1.Image = ((System.Drawing.Image)(resources.GetObject("picHide1.Image")));
-            this.picHide1.Location = new System.Drawing.Point(617, 235);
+            this.picHide1.Location = new System.Drawing.Point(617, 362);
             this.picHide1.Name = "picHide1";
             this.picHide1.Size = new System.Drawing.Size(50, 31);
             this.picHide1.TabIndex = 10;
@@ -162,7 +164,7 @@
             // picShow1
             // 
             this.picShow1.Image = ((System.Drawing.Image)(resources.GetObject("picShow1.Image")));
-            this.picShow1.Location = new System.Drawing.Point(617, 160);
+            this.picShow1.Location = new System.Drawing.Point(617, 276);
             this.picShow1.Name = "picShow1";
             this.picShow1.Size = new System.Drawing.Size(50, 29);
             this.picShow1.TabIndex = 11;
@@ -171,11 +173,27 @@
             // picShow2
             // 
             this.picShow2.Image = ((System.Drawing.Image)(resources.GetObject("picShow2.Image")));
-            this.picShow2.Location = new System.Drawing.Point(617, 235);
+            this.picShow2.Location = new System.Drawing.Point(617, 362);
             this.picShow2.Name = "picShow2";
             this.picShow2.Size = new System.Drawing.Size(50, 31);
             this.picShow2.TabIndex = 12;
             this.picShow2.TabStop = false;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(61, 117);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(203, 23);
+            this.lblEmail.TabIndex = 13;
+            this.lblEmail.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(302, 117);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(269, 22);
+            this.txtEmail.TabIndex = 14;
             // 
             // dki
             // 
@@ -183,6 +201,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1039, 597);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.picShow2);
             this.Controls.Add(this.picShow1);
             this.Controls.Add(this.picHide1);
@@ -195,7 +215,7 @@
             this.Controls.Add(this.btnĐK);
             this.Controls.Add(this.lblNLMK);
             this.Controls.Add(this.lblMK);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTK);
             this.Name = "dki";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "dki";
@@ -211,7 +231,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTK;
         private System.Windows.Forms.Label lblMK;
         private System.Windows.Forms.Label lblNLMK;
         private System.Windows.Forms.Button btnĐK;
@@ -225,5 +245,7 @@
         private System.Windows.Forms.PictureBox picHide2;
         private System.Windows.Forms.CheckBox chkNLMK;
         private System.Windows.Forms.CheckBox chkMK;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblEmail;
     }
 }

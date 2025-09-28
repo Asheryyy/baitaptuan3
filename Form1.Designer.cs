@@ -37,6 +37,8 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnĐK = new System.Windows.Forms.Button();
             this.chkHide = new System.Windows.Forms.CheckBox();
+            this.lblTK = new System.Windows.Forms.Label();
+            this.lblMK = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picHide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +46,7 @@
             // txtDN
             // 
             this.txtDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDN.Location = new System.Drawing.Point(143, 72);
+            this.txtDN.Location = new System.Drawing.Point(268, 74);
             this.txtDN.Name = "txtDN";
             this.txtDN.Size = new System.Drawing.Size(272, 27);
             this.txtDN.TabIndex = 0;
@@ -52,7 +54,7 @@
             // txtMK
             // 
             this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.Location = new System.Drawing.Point(143, 153);
+            this.txtMK.Location = new System.Drawing.Point(268, 153);
             this.txtMK.Name = "txtMK";
             this.txtMK.Size = new System.Drawing.Size(272, 27);
             this.txtMK.TabIndex = 1;
@@ -61,7 +63,7 @@
             // picHide
             // 
             this.picHide.Image = ((System.Drawing.Image)(resources.GetObject("picHide.Image")));
-            this.picHide.Location = new System.Drawing.Point(470, 150);
+            this.picHide.Location = new System.Drawing.Point(606, 153);
             this.picHide.Name = "picHide";
             this.picHide.Size = new System.Drawing.Size(43, 30);
             this.picHide.TabIndex = 2;
@@ -70,7 +72,7 @@
             // picShow
             // 
             this.picShow.Image = ((System.Drawing.Image)(resources.GetObject("picShow.Image")));
-            this.picShow.Location = new System.Drawing.Point(470, 150);
+            this.picShow.Location = new System.Drawing.Point(606, 153);
             this.picShow.Name = "picShow";
             this.picShow.Size = new System.Drawing.Size(43, 30);
             this.picShow.TabIndex = 3;
@@ -80,7 +82,7 @@
             // 
             this.lbl1.BackColor = System.Drawing.Color.Transparent;
             this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(37, 274);
+            this.lbl1.Location = new System.Drawing.Point(164, 274);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(282, 35);
             this.lbl1.TabIndex = 4;
@@ -90,7 +92,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(220, 197);
+            this.btnLogin.Location = new System.Drawing.Point(362, 198);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(154, 51);
             this.btnLogin.TabIndex = 5;
@@ -101,7 +103,7 @@
             // btnĐK
             // 
             this.btnĐK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnĐK.Location = new System.Drawing.Point(346, 274);
+            this.btnĐK.Location = new System.Drawing.Point(481, 274);
             this.btnĐK.Name = "btnĐK";
             this.btnĐK.Size = new System.Drawing.Size(187, 35);
             this.btnĐK.TabIndex = 6;
@@ -112,12 +114,34 @@
             // chkHide
             // 
             this.chkHide.AutoSize = true;
-            this.chkHide.Location = new System.Drawing.Point(433, 163);
+            this.chkHide.Location = new System.Drawing.Point(569, 163);
             this.chkHide.Name = "chkHide";
             this.chkHide.Size = new System.Drawing.Size(18, 17);
             this.chkHide.TabIndex = 7;
             this.chkHide.UseVisualStyleBackColor = true;
             this.chkHide.CheckedChanged += new System.EventHandler(this.chkHide_CheckedChanged);
+            // 
+            // lblTK
+            // 
+            this.lblTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTK.Location = new System.Drawing.Point(100, 74);
+            this.lblTK.Name = "lblTK";
+            this.lblTK.Size = new System.Drawing.Size(122, 23);
+            this.lblTK.TabIndex = 8;
+            this.lblTK.Text = "Tài Khoản";
+            this.lblTK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTK.Click += new System.EventHandler(this.lblTK_Click);
+            // 
+            // lblMK
+            // 
+            this.lblMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMK.Location = new System.Drawing.Point(103, 163);
+            this.lblMK.Name = "lblMK";
+            this.lblMK.Size = new System.Drawing.Size(119, 23);
+            this.lblMK.TabIndex = 9;
+            this.lblMK.Text = "Mật Khẩu";
+            this.lblMK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMK.Click += new System.EventHandler(this.lblMK_Click);
             // 
             // Form1
             // 
@@ -125,6 +149,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMK);
+            this.Controls.Add(this.lblTK);
             this.Controls.Add(this.chkHide);
             this.Controls.Add(this.btnĐK);
             this.Controls.Add(this.btnLogin);
@@ -153,6 +179,8 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnĐK;
         private System.Windows.Forms.CheckBox chkHide;
+        private System.Windows.Forms.Label lblTK;
+        private System.Windows.Forms.Label lblMK;
     }
 }
 

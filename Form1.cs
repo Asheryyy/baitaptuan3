@@ -60,5 +60,15 @@ namespace baitap001
         {
             txtMK.PasswordChar = '*';
         }
+
+        private void lblTK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMK_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
